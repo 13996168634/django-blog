@@ -132,4 +132,4 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = ':8080/static/'
+STATIC_URL = 'http://101.132.115.240:8080/static/'
