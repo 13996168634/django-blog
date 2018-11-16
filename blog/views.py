@@ -7,6 +7,9 @@ from .models import Post, Category, Tag
 
 from django.views.generic import ListView, DetailView
 
+from django.utils.text import slugify
+from markdown.extensions.toc import TocExtension
+
 """
 def index(request):
     post_list = Post.objects.all().order_by('-created_time')
@@ -198,6 +201,7 @@ class PostDetailView(DetailView):
 
     def get_object(self, queryset=None):
         # 覆写 get_object 方法的目的是因为需要对 post 的 body 值进行渲染
+        """
         post = super(PostDetailView, self).get_object(queryset=None)
         post.body = markdown.markdown(post.body,
                                       extensions=[
@@ -205,6 +209,18 @@ class PostDetailView(DetailView):
                                           'markdown.extensions.codehilite',
                                           'markdown.extensions.toc',
                                       ])
+        return post
+        """
+        post = super(PostDetailView, self).get_object(queryset=None)
+        md = markdown.Markdown(extensions=[
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',
+            # 'markdown.extensions.toc',
+            # 记得在顶部引入 TocExtension 和 slugify
+            TocExtension(slugify=slugify),
+        ])
+        post.body = md.convert(post.body)
+        post.toc = md.toc
         return post
 
     def get_context_data(self, **kwargs):
