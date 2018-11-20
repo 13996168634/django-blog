@@ -217,6 +217,7 @@ class PostDetailView(DetailView):
         md = markdown.Markdown(extensions=[
             'markdown.extensions.extra',
             'markdown.extensions.codehilite',
+            'tables',
             # 'markdown.extensions.toc',
             # 记得在顶部引入 TocExtension 和 slugify
             TocExtension(slugify=slugify),
