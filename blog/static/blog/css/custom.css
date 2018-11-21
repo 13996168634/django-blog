@@ -219,7 +219,7 @@ img {
 }
 
 .entry-title {
-    text-align: center;
+    text-align: left;
     font-size: 1.9em;
     margin-bottom: 20px;
     line-height: 1.6;
@@ -227,7 +227,7 @@ img {
 }
 
 .entry-meta {
-    text-align: center;
+    text-align: left;
     color: #DDDDDD;
     font-size: 13px;
     margin-bottom: 30px;
@@ -241,6 +241,8 @@ img {
 }
 
 .post-category::after,
+.views-count::after,
+.post-tag::after,
 .post-date::after,
 .post-author::after,
 .comments-link::after {
