@@ -39,7 +39,7 @@
 <a href="javascript:;" id="btn" title="回到顶部"></a>
 
 <div class="container">
-    <header id="site-header">
+    <header style="border: #666666 solid 1px; background-color: #efefef;" id="site-header">
         <div class="row">
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
@@ -90,7 +90,7 @@
             <aside class="col-md-4">
                 {% block toc %}
                 {% endblock toc %}
-                <div class="widget widget-recent-posts">
+                <div style="border: #666666 solid 1px; background-color: #efefef; margin: 10px; text-indent: 1em;" class="widget widget-recent-posts">
                     <h3 class="widget-title">最新文章</h3>
                     {% get_recent_posts as recent_post_list %}
                     <ul>
@@ -103,7 +103,7 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="widget widget-archives">
+                <div style="border: #666666 solid 1px; background-color: #efefef; margin: 10px; text-indent: 1em;" class="widget widget-archives">
                     <h3 class="widget-title">文章归档</h3>
                     {% archives as date_list %}
                     <ul>
@@ -119,7 +119,7 @@
                     </ul>
                 </div>
 
-                <div class="widget widget-category">
+                <div style="border: #666666 solid 1px; background-color: #efefef; margin: 10px; text-indent: 1em;" class="widget widget-category">
                     <h3 class="widget-title">文章分类</h3>
                     {% get_categories as category_list %}
                     <ul>
@@ -135,7 +135,7 @@
                     </ul>
                 </div>
 
-                <div class="widget widget-tag-cloud">
+                <div style="border: #666666 solid 1px; background-color: #efefef; margin: 10px; text-indent: 1em;" class="widget widget-tag-cloud">
                     <h3 class="widget-title">标签云</h3>
                     {% get_tags as tag_list %}
                     <ul>

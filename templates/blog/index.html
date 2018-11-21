@@ -6,7 +6,7 @@
     {% endif %}
 
     {% for post in post_list %}
-    <article style="border: #666666 solid 1px; background-color: #999999" class="post post-{{ post.pk }}">
+    <article style="border: #666666 solid 1px; background-color: #efefef; margin: 10px;" class="post post-{{ post.pk }}">
         <header class="entry-header">
             <h1 class="entry-title">
                 <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
