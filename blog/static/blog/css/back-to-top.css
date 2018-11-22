@@ -5,13 +5,13 @@
     display: none;
     right: 30px;
     bottom: 30px;
-    /*background: url(http://101.132.115.240:8080/static/blog/img/topicon.png);*/
-    background: url('blog/img/topicon.png');
+    background: url(http://101.132.115.240:8080/static/blog/img/topicon.png);
+    /*background: url('blog/img/topicon.png');*/
 }
 
 #btn:hover {
-    /*background: url(http://101.132.115.240:8080/static/blog/img/topiconblack.png);*/
-    background: url('blog/img/topiconblack.png');
+    background: url(http://101.132.115.240:8080/static/blog/img/topiconblack.png);
+    /*background: url('blog/img/topiconblack.png');*/
 }
 
 /*.box {*/
